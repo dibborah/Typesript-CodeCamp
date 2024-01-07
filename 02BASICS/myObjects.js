@@ -1,28 +1,23 @@
-var user = {
-    name: "dibya",
-    email: "dibya@typescriptcoder.com",
-    isActive: true,
+"use strict";
+// const user = {
+//     name: "dibya",
+//     email: "dibya@typescriptcoder.com",
+//     isActive: true,
+// }
+
+// THIS IS JUST THE CONFIG FILE OF THE TYPESCRIPT 
+
+// The readonly error which is shown in the typescript file is not reflected here in the config file of the typescript , in the js file
+// So there is nothing which stops me to change the _id key here in the javascript
+// Which implies that the readonly is purely a property of the TYPESCRIPT and not of JAVASCRIPT
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var myUser = {
+    _id: "1234",
+    name: "d",
+    email: "d@d.com",
+    isActive: false,
+    // credCardDetails:345,
 };
-// Two common use Case of functions:
-// 1. We pass on object through a function 
-// 2. We return objects through a function
-// This are two common use case of functions
-// Use Case 1: Taking object as an arguement
-function createUser1(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
-;
-createUser1({ name: "dibya", isPaid: false });
-// Use Case 2: Returning an object
-function createCourse() {
-    return { name: "typescript", price: 34 };
-}
-// The odd behaviour regarding Typescript which comes in Typescript
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
-;
-var newUser = { name: "typescript", isPaid: false, email: "dibya@email.com" };
-createUser(newUser); // Here email is also pass which violates the typesript basic functionality and point of usage
-// This is a bug in typescript
-// createUser({name:"typescript", isPaid:false, email:"dibya@email.com"})// Kind of this is allowed in the above code
+myUser.email = "dibya@d.com";
+myUser._id = "6789"; // This was throwing error in the typescript file as in the typescript file we used the readonly property but here in the config file even when we assigned another value to _id no error is thrown
