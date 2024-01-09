@@ -1,3 +1,5 @@
+// TUPLES are simply ARRAYS with RESTRICTIONS
+
 // In normal situation orders of data in an array is not important
 // So when we need an array of different types of data not necessarily in an specified order we use union
 
@@ -25,3 +27,16 @@ let rgb: [number, number, number] = [255, 255, 255];
 type User = [number, string];
 
 const newUser: User = [123, "example@email.com"];
+
+// Something wrong about Tuples
+// Some ODD behaviour about Tuples:
+
+// We can override or change the existing values of the tuples
+// # To change the values the type of value we are pushing have to match the defined type in order
+// Then values can be overrided
+newUser[0] = 456;
+newUser[1] = "dance";
+// newUser[2] = "xyz";// This is not allowed and will throw error since User type is of length two and in the index[2] doesnot exist so no value at index 2
+
+// newUser.push(true);// Boolean type is not assignable
+// Tuples are simple ARRAYS with restrictions
