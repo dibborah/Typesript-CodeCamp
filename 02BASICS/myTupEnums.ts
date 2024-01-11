@@ -24,9 +24,9 @@ TUser = ["abc", 123, true];
 
 let rgb: [number, number, number] = [255, 255, 255];
 
-type User = [number, string];
+// type User = [number, string];
 
-const newUser: User = [123, "example@email.com"];
+// const newUser: User = [123, "example@email.com"];
 
 // Something wrong about Tuples
 // Some ODD behaviour about Tuples:

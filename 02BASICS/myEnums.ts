@@ -7,14 +7,14 @@
 // WhereAs if a NUMBER value is assigned than a value assigned criteria is not mandatory in Enum(since it automatically assigns than)
 // When number are assigned it assignes whatever value are below it by itself based on an ascending order
 
-// const enum seatChoice {
-//     AISLE = "AISLE",
-//     MIDDLE = 2,
-//     WINDOW = "",
-//     FOURTH = "FOUR"
-// }
+const enum seatChoice {
+    AISLE = "AISLE",
+    MIDDLE = 2,
+    WINDOW = "",
+    FOURTH = "FOUR"
+}
 
-// const seat = seatChoice.AISLE;
+const seat = seatChoice.AISLE;
 
 // In case of situation where we need RESTRICTIVE options ENUMS serves us really well
 // Ex: seat position in Plane. Only 3 seat options are avaible and customers have to choose between only those 3 options
