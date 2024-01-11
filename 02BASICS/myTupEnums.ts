@@ -36,6 +36,7 @@ const newUser: User = [123, "example@email.com"];
 // Then values can be overrided
 newUser[0] = 456;
 newUser[1] = "dance";
+// newUser[2] = true;// Throws error // Earlier version of Typescript was maybe allowing this code But the new versions of typescript is surely refusing it and is throwing errors
 // newUser[2] = "xyz";// This is not allowed and will throw error since User type is of length two and in the index[2] doesnot exist so no value at index 2
 
 // newUser.push(true);// Boolean type is not assignable
