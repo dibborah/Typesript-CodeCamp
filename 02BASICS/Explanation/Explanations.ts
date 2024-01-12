@@ -18,5 +18,17 @@
 
 // command for installing this two folders: mkdir src dist // See how this space is used in the command to install more than one folder or package in a single command itself
 
+// command to set ourDir: ./Dist in tsconfig file: tsc -W
+// So that whatever index.ts file is written in src folder in typescript gets compiled into js file in index.js file in the dist folder set in the tsconfig file
+
+// This command puts the compiler in the watch mode and it keeps on watching based on the tsconfig json and try to run this things there
+
+
+// Installing lite-server package
+// Command: npm i lite-server
+// After installing it:
+// Go to the package.json:
+// scripts: "start": "lite-server"
+
 
 
