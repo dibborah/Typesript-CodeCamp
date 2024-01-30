@@ -7,7 +7,7 @@
 //         this.name = name
 //     }
 // }
-
+ 
 // const dibya = new User("dib@d.co", "dibya");
 class User {
     private readonly city:string = "Jaipur";
@@ -16,6 +16,10 @@ class User {
         public name:string,
         private userId:string,
         ){// short syntax where this is no need to be written
+    }
+    // getAppleEmail: () => string,
+    getAppleEmail():string{
+        return "";
     }
 }
 

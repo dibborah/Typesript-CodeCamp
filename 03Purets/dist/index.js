@@ -16,6 +16,10 @@ class User {
         this.userId = userId;
         this.city = "Jaipur";
     }
+    // getAppleEmail: () => string,
+    getAppleEmail() {
+        return "";
+    }
 }
 const dibya = new User("dib@d.co", "dibya", "123");
 // dibya.city; // Not accessible out the constructor function since the city property is made private
