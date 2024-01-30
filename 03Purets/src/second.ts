@@ -31,5 +31,6 @@
 //     }
 // }
 
+// #Note: When CLASSes inherits INTERFACEes we use the keyword "IMPLEMENTS" 
 
 
