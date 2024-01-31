@@ -44,6 +44,39 @@
 //     type: 8
 // })
 
+// For Array
+
+// // Problem on Generic type with Array.length method
+
+// First way to define an Array []
+function getSearchProduct1Way<T>(products:T[]): T {
+    // do some database operations
+    const myIndex = 3;
+    return products[myIndex];// This is one of the value of the T[n] since return type is just T and T[]
+}
+function getSearchProduct1WayAgain<T>(products:T[]): T[] {
+    return products;// Here products is a whole Array [] since return type is T[] a whole array and not just an element of the Array
+}
+// Second way to define an Array <>
+function getSearchProduct2ndWay<T>(products: Array<T>):Array<T>{
+    return products;
+}
 
 
+// Defining the same above Array Generic function using ARROW function
+
+// 1st way
+const getMoreSearchProducts = <T, >(products: T[]): T => {
+    const myIndex = 4;
+    products.length;// Since the paremeter is an Array so length method can also be used
+    return products[myIndex];
+}
+
+// 2nd way
+ 
+const getMoreSearchProduct = <T>(products: Array<T>): T => {
+    const myIndex = 4;
+    products.length;
+    return products[myIndex];
+}
  
