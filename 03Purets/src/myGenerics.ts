@@ -105,3 +105,26 @@ function anotherFunctions <T, Database>(valOne:T, valTwo:Database):object {
     }
 }
 anotherFunctions (3, {x:"", y:"", z:""});
+
+// Using types in Generics
+
+interface Quiz {
+    name: string,
+    type: string,
+}
+
+interface Course{
+    name:string,
+    author:string,
+    subject:string,
+}
+
+class Sellable<T>{// This is generic class
+    public cart: T[] = [];
+    
+    // const addToCart(product:T):T[]{// This syntax is wrong as class cannot have a const as a class member
+    addToCart(product: T): T[]{
+        this.cart.push(product);
+        return [product]
+    }
+}
