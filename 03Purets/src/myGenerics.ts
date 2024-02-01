@@ -79,4 +79,29 @@ const getMoreSearchProduct = <T>(products: Array<T>): T => {
     products.length;
     return products[myIndex];
 }
- 
+
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string,
+}
+
+// Extending types/ interfaces in Generics
+
+function anotherFunction <T, U extends Database>(valOne:T, valTwo:Database):object {
+    return {
+       valOne,
+       valTwo,
+    }
+}
+
+anotherFunction (3, {connection:"", username:"", password:""});
+
+function anotherFunctions <T, Database>(valOne:T, valTwo:Database):object {
+    return {
+       valOne,
+       valTwo,
+    }
+}
+anotherFunctions (3, {x:"", y:"", z:""});
