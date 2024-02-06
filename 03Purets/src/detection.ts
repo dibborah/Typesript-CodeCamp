@@ -16,6 +16,21 @@ function provideId(id: string | null){// We developers are always needed to be e
     return id.toLowerCase();
 }
 
+// # Note: In TypeScript typeof operator is called Type Guard
+
+function printAll(strs: string | string[] | null) {
+    if(strs){
+        if (typeof strs === "object") {
+            for (const s of strs) {
+                //   'strs' is possibly 'null'.
+                console.log(s);
+            }
+        } else if (typeof strs === "string") {
+            console.log(strs);
+        }
+    }
+  }
+
 // typeof operator (Type Guards)
 // Js has a typeof operator which returns the type of the values
 // Js expects this to return a certain set of string:
