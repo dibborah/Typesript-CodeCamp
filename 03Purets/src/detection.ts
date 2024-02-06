@@ -87,14 +87,14 @@ function isAdminAccount(account: User | Admin){
 // Objects that can be create using new keyword
 
 // 1. custom objects
-// instances of built-in constructors functions
+// instances of built-in constructors functions and class
 
 // const arr = new Array();
 // const obj = new Object();
 // const today = new Date();
-// const map = new Map(); // create new map objects for storing key value pairs
+// const map = new Map(); // create new map object for storing key value pairs
 // const reg = new RegExp(pattern);
-// const set = new Set(); // creating set of objects for storing unique values(UNIQUE VALUES)
+// const set = new Set(); // creating set object for storing unique values(UNIQUE VALUES)
 
 // user defined constructor
 
