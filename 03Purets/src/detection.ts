@@ -157,3 +157,66 @@ function getFood(pet: Fish | Bird){
 // In (pet as Fish) we are telling the typescript compliler to treat the pet as Fish type explicitly (this is called type assertion)
 // Since pet can be either Fish or Bird 
 
+
+// DISCRIMINATED UNIONS AND EXHAUTIVENESS CHECKING WITH NEVER
+
+// DISCRIMINATED UNIONS
+
+interface Circle{
+    kind: "circle",
+    radius: number,
+}
+
+interface Square{
+    kind: "square",
+    side: number
+}
+
+interface Rectangle{
+    kind: "rectangle",
+    length: number,
+    width: number
+}
+
+interface Triangle{
+    kind: "triangle",
+    length: number,
+    width: number
+}
+
+// Here we are having a same property kind in each of the interfaces
+// But instead of mentioning as Kind : string or number we are directly mentioning or giving a value
+// This is the concept of DISCRIMINATED UNIONS with help to check misspelling errors
+
+// usages of the above created interfaces
+
+type Shape = Circle | Square | Rectangle ;
+
+function getTrueShape(shape: Shape){
+    if(shape.kind === "circle"){
+        return Math.PI * shape.radius ** 2
+    }
+    // return shape.side * shape.side;
+}
+
+function getArea(shape: Shape){
+    switch(shape.kind){
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        
+        case "square":
+            return shape.side * shape.side;
+        case "rectangle":
+            return shape.length * shape.width;        
+        default:
+            const _defaultForShape: never = shape;// This line is yelling error since I am not checking for all the exhaustive cases. And this is what we want to yell error at us when we donot do exhaustive checking
+            // This is wrong since we have defined and used Rectangle but not checking for Rectangle
+            return _defaultForShape;
+            // # Type Never should never be assigned to any varible 
+            // It is just used for future- proofing the code
+            // # This default method should never be running than only our code is fine
+            // ### But this doesnot mean that its existance is useless
+            // ### The default is like an insurance and is very important for type narrowing and checking
+    }
+}
+
