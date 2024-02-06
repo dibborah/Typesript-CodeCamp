@@ -84,9 +84,39 @@ function isAdminAccount(account: User | Admin){
 // 2. instanceof guards => used with instance created using new keyword
 // 3. user-defined Typeguard => Custom fc that return type predicate
 
+// Objects that can be create using new keyword
+
+// 1. custom objects
+// instances of built-in constructors functions
+
+// const arr = new Array();
+// const obj = new Object();
+// const today = new Date();
+// const map = new Map(); // create new map objects for storing key value pairs
+// const reg = new RegExp(pattern);
+// const set = new Set(); // creating set of objects for storing unique values(UNIQUE VALUES)
+
+// user defined constructor
+
+// ES6 classes
+
+// instance of fc object
+
+// instances of DOM element
+// const divElement = new HTMLDivElement();
+// const anchorElement = new HTMLAnchorElement();
+
+
+
+
+
+
 // instanceof and Type Predicate
 
 // instanceof Narrowing
 
 // #Note: Anything that can be constructed with the new keyword, that's where
 // the instanceof comes into the picture
+
+// Javascript has a operator called instanceof operator to check whether or not an value is an instance or not of another value
+// For example : x instanceof foo.prototype
