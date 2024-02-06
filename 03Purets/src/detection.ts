@@ -107,10 +107,6 @@ function isAdminAccount(account: User | Admin){
 // const anchorElement = new HTMLAnchorElement();
 
 
-
-
-
-
 // instanceof and Type Predicate
 
 // instanceof Narrowing
@@ -120,3 +116,44 @@ function isAdminAccount(account: User | Admin){
 
 // Javascript has a operator called instanceof operator to check whether or not an value is an instance or not of another value
 // For example : x instanceof foo.prototype
+
+function logValue(x: Date | string){// instanceof type guard can only be used when there is a new keyword
+    // Used only when new keyword is used
+    if(x instanceof Date){
+        console.log(x.toUTCString());
+    }else{
+        console.log(x.toLowerCase());        
+    }
+}
+
+// using TYPE PREDICATES(is keyword)
+
+// we'll se some kind of a flaw or logical flow of it
+
+// This way gives us a more DIRECT CONTROL on type checking
+
+// To define a user-defined (is keyword) type guard we simply need to define a function
+// whose return type is type predicate ((RETURN TYPE => TYPE PREDICATE)) 
+
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+
+// pet Validation fc/ method
+function isFish(pet: Fish | Bird): pet is Fish{// When we write here with is keyword the Type(ex. Fish) and not a boolean value like true
+    return (pet as Fish).swim !== undefined;// Then when this line returns true the return type Fish(setted) will be taken as the type of pet 
+}
+
+function getFood(pet: Fish | Bird){
+    if(isFish(pet)){
+        pet;
+        return "Fish Food";
+    }else{
+        pet;
+        return "Bird Food"
+    }
+}
+
+// # In the above code as refers to type assertion 
+// In (pet as Fish) we are telling the typescript compliler to treat the pet as Fish type explicitly (this is called type assertion)
+// Since pet can be either Fish or Bird 
+
