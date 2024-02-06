@@ -42,3 +42,24 @@ function printAll(strs: string | string[] | null) {
                 // 3. null === object
 
                 // In JS OBJECTS, NULL, ARRAYS === OBJECTS
+
+
+// "in" operator in Typescript
+
+interface User {
+    name: string,
+    email: string
+}
+
+interface Admin {
+    name: string,
+    email: string,
+    isAdmin: boolean
+}
+
+function isAdminAccount(account: User | Admin){
+    if("isAdmin" in account){
+        return account.isAdmin;
+    };
+}
+
