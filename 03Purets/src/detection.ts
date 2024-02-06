@@ -74,3 +74,19 @@ function isAdminAccount(account: User | Admin){
 // objects vs new Objects
 // Objects literals objects => Object type. Js Fundamental Data Type 
 // new Object => Instance which is created by a Constructor function
+
+// Typeguards : Gives typescript additional types information 
+// Typeguards : narrows down types within a block.
+// Especially usefull with union types and when a type of a variable is not immediately apparent.
+
+// Type Guards : 
+// 1. typeof type guards
+// 2. instanceof guards => used with instance created using new keyword
+// 3. user-defined Typeguard => Custom fc that return type predicate
+
+// instanceof and Type Predicate
+
+// instanceof Narrowing
+
+// #Note: Anything that can be constructed with the new keyword, that's where
+// the instanceof comes into the picture
