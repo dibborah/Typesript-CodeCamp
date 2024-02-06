@@ -63,3 +63,14 @@ function isAdminAccount(account: User | Admin){
     };
 }
 
+
+// Class & Constructor function => They are not the same
+
+// Class is a blueprint or template for creating objects in Object Oriented Programming
+// Constructor : It is a special method used within a class for initializing the states of created objects 
+
+// Factory Functions => Normal fc's which are not used to create Instances 
+
+// objects vs new Objects
+// Objects literals objects => Object type. Js Fundamental Data Type 
+// new Object => Instance which is created by a Constructor function
